@@ -7,14 +7,8 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: false
-      routes:
-        - id: product-service
-          uri: lb://product-service
-          predicates:
-            - Path=/product-service/**
-          filters:
-            - StripPrefix=1
+          enabled: true
+          lower-case-service-id: true
 eureka:
   client:
     service-url:
