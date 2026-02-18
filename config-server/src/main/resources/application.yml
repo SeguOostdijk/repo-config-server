@@ -7,11 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/SeguOostdijk/config-server-test.git
+          uri: https://github.com/SeguOostdijk/repo-config-server.git
           searchPaths: config-data
           username: ${GIT_USER}
           password: ${GIT_PASSWORD}
-  eureka:
-    client:
-      service-url:
-        defaultZone: http://localhost:8761/eureka
