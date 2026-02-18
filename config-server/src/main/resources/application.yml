@@ -8,6 +8,7 @@ spring:
       server:
         git:
           uri: https://github.com/SeguOostdijk/repo-config-server.git
+          default-label: master
           searchPaths: config-data
           username: ${GIT_USER}
           password: ${GIT_PASSWORD}
