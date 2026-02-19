@@ -5,10 +5,11 @@ spring:
     name: api-gateway
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
+      routes:
+        - id: PRODUCT-SERVICE
+          uri: http://localhost:8081
+          predicates:
+            - Path=/demo/**
 eureka:
   client:
     service-url:
