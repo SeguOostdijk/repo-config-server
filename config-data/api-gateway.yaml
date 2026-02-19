@@ -9,15 +9,13 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: false  
+          enabled: false
 
       routes:
         - id: product-service
           uri: lb://product-service
           predicates:
-            - Path=/product-service/**
-          filters:
-            - StripPrefix=1
+            - Path=/products/**
 
 eureka:
   client:
