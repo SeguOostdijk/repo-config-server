@@ -20,8 +20,3 @@ spring:
           uri: lb://order-service
           predicates:
             - Path=/orders/**
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
